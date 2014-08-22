@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.1.0'
 
 gem 'rails', '4.1.0'
 gem 'sqlite3'
@@ -26,4 +27,5 @@ end
 
 group :test do
 	gem 'capybara'
+	gem 'shoulda-matchers', '~> 2.6.2'
 end
