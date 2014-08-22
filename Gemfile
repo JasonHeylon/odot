@@ -21,6 +21,7 @@ gem 'spring',        group: :development
 
 group :development, :test do
 	gem 'rspec-rails'
+	gem 'rspec-activemodel-mocks'
 end
 
 group :test do
