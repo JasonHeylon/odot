@@ -1,7 +1,7 @@
 class TodoItemsController < ApplicationController
 
   before_action :find_todo_list
-  before_action :find_todo_items, only: [:edit, :update, :destroy]
+  before_action :find_todo_items, only: [:edit, :update, :destroy, :complete]
 
 
   def index
@@ -56,6 +56,12 @@ class TodoItemsController < ApplicationController
     end
     
     redirect_to todo_list_todo_items_path
+  end
+
+
+  def complete
+    @todo_item.update(completed_at: Time.now)
+    redirect_to todo_list_todo_items_path, notice: "Todo item marked as complete."
   end
 
 
